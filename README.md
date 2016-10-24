@@ -18,8 +18,7 @@ This guide will show you how to install OnPrem® using Ansible, as well providin
 ##### Installing server roles
 
 * Database
-    *  [MySQL](#Mysql)
-    
+    *  [MySQL](#sphinx)
 * Search engine
     *  [Sphinx](#sphinx)
 * [Load Balancer and SSL terminator](server-roles/load-balancer/)
