@@ -24,3 +24,4 @@ secondarysphinx:
 
 Note:
 parameter ansible_hostanme is used a variable from ansible gathered facts (same node hostname)
+[I'm an inline-style link](https://www.google.com)
