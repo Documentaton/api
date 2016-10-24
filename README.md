@@ -1,10 +1,9 @@
-Server role : Sphinx
+#Server role : Sphinx
 
 In a standard OnPrem® deploy we will install two Sphinx nodes for redundancy.
 
-Kaltura-sphnx playbook:
 
-Installation Steps:
+###Installation Steps:
 
 Install essentials packages for sphinx Server
 Executes /opt/kaltura/bin/kaltura-sphinx-config.sh /root/ansible-kaltura.ans
@@ -13,15 +12,17 @@ Copies populate init files to sphinx servers
 Multiple sphinx optimizations & config changes
 Sphinx services are restarted
 
-Hosts
+###Role:
+Kaltura-sphnx playbook:
+
+###Hosts:
 [db]
 Vault parameters in use:
 
-### Sphinx Params
+###Sphinx Params
 primarysphinx: 
 secondarysphinx: 
 
-
-Note:
+###Note:
 
 [ansible_hostname](https://github.com/Kaltura-PS/onprem-ansible/blob/master/roles/kaltura-sphinx/templates/hostname.template.ini.j2) value arrives from ansible gathered facts (specifies same node hostaname)
