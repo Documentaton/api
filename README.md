@@ -16,10 +16,11 @@ Sphinx services are restarted
 Kaltura-sphnx playbook:
 
 ###Hosts:
-[db]
-Vault parameters in use:
+[index]
 
-###Sphinx Params
+###Vault parameters in use:
+
+Sphinx Params
 primarysphinx: 
 secondarysphinx: 
 
