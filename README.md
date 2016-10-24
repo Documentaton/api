@@ -27,3 +27,4 @@ secondarysphinx:
 ###Note:
 
 [ansible_hostname](https://github.com/Kaltura-PS/onprem-ansible/blob/master/roles/kaltura-sphinx/templates/hostname.template.ini.j2) value arrives from ansible gathered facts (Hostaname of the same node)
+[#test] (fol/)
