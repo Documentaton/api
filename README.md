@@ -18,9 +18,9 @@ This guide will show you how to install OnPrem® using Ansible, as well providin
 ##### Installing server roles
 
 * Database
-    *  [MySQL](#sphinx)
+    *  [MySQL](#sphinx1)
 * Search engine
-    *  [Sphinx](#sphinx)
+    *  [Sphinx](#sphinx2)
 * [Load Balancer and SSL terminator](server-roles/load-balancer/)
     * HAProxy
 * [API](server-roles/API/)
@@ -38,7 +38,7 @@ This guide will show you how to install OnPrem® using Ansible, as well providin
 * Monitoring
 
 
-#Mysql
+#Sphinx1
 
 In a standard OnPrem® deploy we will install MySQL MASTER-SLAVE replication. Only development enviroments such as "All in one" deployments will not have database redundancy.
 
@@ -83,7 +83,7 @@ In a standard OnPrem® deploy we will install MySQL MASTER-SLAVE replication. On
 > * The failover switch to MySQL SLAVE is not automatic and requires human interventation
 
 
-#Sphinx
+#Sphinx2
 
 
 In a standard OnPrem® deploy we will install two Sphinx nodes for redundancy.
