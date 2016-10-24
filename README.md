@@ -23,5 +23,5 @@ secondarysphinx:
 
 
 Note:
-parameter ansible_hostanme is used a variable from ansible gathered facts (same node hostname)
-[I'm an inline-style link](https://www.google.com)
+
+[ansible_hostname](https://github.com/Kaltura-PS/onprem-ansible/blob/master/roles/kaltura-sphinx/templates/hostname.template.ini.j2) value arrives from ansible gathered facts (specifies same node hostaname)
