@@ -17,7 +17,7 @@ Hosts
 [db]
 Vault parameters in use:
 
-# Sphinx Params
+### Sphinx Params
 primarysphinx: 
 secondarysphinx: 
 
