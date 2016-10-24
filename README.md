@@ -5,12 +5,12 @@ In a standard OnPrem® deploy we will install two Sphinx nodes for redundancy.
 
 ###Installation Steps:
 
-..*Install essentials packages for sphinx Server
-..*Executes /opt/kaltura/bin/kaltura-sphinx-config.sh /root/ansible-kaltura.ans
-Copies template to /opt/kaltura/app/configurations/sphinx/populate/{{ ansible_hostname }}.ini
-Copies populate init files to sphinx servers
-Multiple sphinx optimizations & config changes
-Sphinx services are restarted
+1. Install essentials packages for sphinx Server
+2. Executes /opt/kaltura/bin/kaltura-sphinx-config.sh /root/ansible-kaltura.ans
+3. Copies template to /opt/kaltura/app/configurations/sphinx/populate/{{ ansible_hostname }}.ini
+4. Copies populate init files to sphinx servers
+5. Multiple sphinx optimizations & config changes
+6. Sphinx services are restarted
 
 ###Role:
 Kaltura-sphnx playbook:
