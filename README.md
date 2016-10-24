@@ -61,7 +61,7 @@ This guide will show you how to install OnPrem® using Ansible, as well providin
 
 
 
-
+#Sphinx
 #Server role : #Sphinx
 
 In a standard OnPrem® deploy we will install two Sphinx nodes for redundancy.
