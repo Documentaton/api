@@ -38,31 +38,53 @@ This guide will show you how to install OnPrem® using Ansible, as well providin
 * Monitoring
 
 
+#Database
+
+In a standard OnPrem® deploy we will install MySQL MASTER-SLAVE replication. Only development enviroments such as "All in one" deployments will not have database redundancy.
+
+
+## Installation 
+
+### Steps
+1. Install essentials for MySQL server
+2. Create MySQL configuration from template (my.cnf.j2)
+3. Remove binary log files to avoid restart issues
+4. Security changes:
+ * Delete anonymous user
+ * Change root user password
+5. Create Replication user for Master Slave Replication
+6. Create Logrotate for MySQL
+
+### Playbooks
+  *	kaltura-mysql
+  
+### Roles
+  *	kaltura-mysql-master  
+  *	kaltura-mysql-slave
+  
+### Hosts
+  *	[db]
+
+### Vault parameters in use
+* dbport
+* dbrootuser
+* dbrootpass 
+* dbpass
+* replpass
+* dbhost
+* dbmaster
+* dbslave
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Notes:
+> * (!) Always set a script to monitor MASTER-SLAVE sync
+>  *	If the SLAVE lags behind the MASTER, you will see inconsistency in the platform, as writes are done on the MASTER but many reads are done on SLAVE
+> * The failover switch to MySQL SLAVE is not automatic and requires human interventation
 
 
 #Sphinx
-#Server role : #Sphinx
+
 
 In a standard OnPrem® deploy we will install two Sphinx nodes for redundancy.
 
