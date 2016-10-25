@@ -119,10 +119,13 @@ Latest haproxy deployed using script  redundancy.
 4. SSL certs are copied and configured
 5. syslog is being configured
 6. Log rotate and services restarted
+
 ###Role:
 Kaltura-lb playbook:
+
 ###Hosts:
 [lb]
+
 ###Vault/Other parameters in use:
 origin_host
 apihost
@@ -131,6 +134,7 @@ streaminghost
 livehost
 kmshost
 All hostname listed in ansible hosts are used to populate haproxy template 
+
 ###Note:
 [haproxy template](https://github.com/Kaltura-PS/onprem-ansible/blob/37561ec50ccf6e20a45d02cc7b7e66132a4271d7/roles/kaltura-lb/templates/haproxy.template.cfg.j2)
 
