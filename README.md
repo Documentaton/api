@@ -22,15 +22,15 @@ This guide will show you how to install OnPrem® using Ansible, as well providin
 * Search engine
     *  [Sphinx](#sphinx)
 * Load Balancer and SSL terminator
-    * HAProxy(#haproxy)
-* [API](server-roles/API/)
-    * Apache
-* [DWH](server-roles/DWH/)
-* [Batch](server-roles/batch/)
-* [Admin](server-roles/admin/)
-* [Streaming](server-roles/streaming/)
-    * NGINX
-* [LIVE](server-roles/live/)
+    *  [HAProxy](#haproxy)
+* API
+    * [Apache](#api)
+* [DWH](#DWH)
+* [Batch](#batch)
+* [Admin](#admin)
+* Streaming
+    * [NGINX](#nginx)
+* [LIVE](#live)
 
 ##### Patches and extras
 * Caching
@@ -84,13 +84,9 @@ In a standard OnPrem® deploy we will install MySQL MASTER-SLAVE replication. On
 
 
 #Sphinx
-
-
 In a standard OnPrem® deploy we will install two Sphinx nodes for redundancy.
 
-
 ###Installation Steps:
-
 1. Install essentials packages for sphinx Server
 2. Executes /opt/kaltura/bin/kaltura-sphinx-config.sh /root/ansible-kaltura.ans
 3. Copies template to /opt/kaltura/app/configurations/sphinx/populate/{{ ansible_hostname }}.ini
@@ -105,37 +101,28 @@ Kaltura-sphnx playbook:
 [index]
 
 ###Vault parameters in use:
-
 Sphinx Params
 primarysphinx: 
 secondarysphinx: 
 
 ###Note:
-
 [ansible_hostname](https://github.com/Kaltura-PS/onprem-ansible/blob/master/roles/kaltura-sphinx/templates/hostname.template.ini.j2) value arrives from ansible gathered facts (Hostaname of the same node)
 [#test] (fol/)
 
+
 #haproxy
-
-
 Latest haproxy deployed using script  redundancy.
-
-
 ###Installation Steps:
-
 1. Latest haproxy deployed using a script /etc/haproxy/installHAproxy.sh
 2. haproxy template file is copied
 3. haproxy standard error logs pages are copied
 4. SSL certs are copied and configured
 5. syslog is being configured
 6. Log rotate and services restarted
-
 ###Role:
 Kaltura-lb playbook:
-
 ###Hosts:
 [lb]
-
 ###Vault/Other parameters in use:
 origin_host
 apihost
@@ -144,13 +131,11 @@ streaminghost
 livehost
 kmshost
 All hostname listed in ansible hosts are used to populate haproxy template 
-
 ###Note:
-
 [haproxy template](https://github.com/Kaltura-PS/onprem-ansible/blob/37561ec50ccf6e20a45d02cc7b7e66132a4271d7/roles/kaltura-lb/templates/haproxy.template.cfg.j2)
 
 
-
+#api
 
 
 
