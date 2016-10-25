@@ -21,8 +21,8 @@ This guide will show you how to install OnPrem® using Ansible, as well providin
     *  [MySQL](#mysql)
 * Search engine
     *  [Sphinx](#sphinx)
-* [Load Balancer and SSL terminator](server-roles/load-balancer/)
-    * HAProxy
+* Load Balancer and SSL terminator
+    * HAProxy(#haproxy)
 * [API](server-roles/API/)
     * Apache
 * [DWH](server-roles/DWH/)
@@ -115,7 +115,7 @@ secondarysphinx:
 [ansible_hostname](https://github.com/Kaltura-PS/onprem-ansible/blob/master/roles/kaltura-sphinx/templates/hostname.template.ini.j2) value arrives from ansible gathered facts (Hostaname of the same node)
 [#test] (fol/)
 
-#lb
+#haproxy
 
 
 Latest haproxy deployed using script  redundancy.
