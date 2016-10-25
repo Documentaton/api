@@ -114,3 +114,44 @@ secondarysphinx:
 
 [ansible_hostname](https://github.com/Kaltura-PS/onprem-ansible/blob/master/roles/kaltura-sphinx/templates/hostname.template.ini.j2) value arrives from ansible gathered facts (Hostaname of the same node)
 [#test] (fol/)
+
+#lb
+
+
+Latest haproxy deployed using script  redundancy.
+
+
+###Installation Steps:
+
+1. Latest haproxy deployed using a script /etc/haproxy/installHAproxy.sh
+2. haproxy template file is copied
+3. haproxy standard error logs pages are copied
+4. SSL certs are copied and configured
+5. syslog is being configured
+6. Log rotate and services restarted
+
+###Role:
+Kaltura-lb playbook:
+
+###Hosts:
+[lb]
+
+###Vault/Other parameters in use:
+origin_host
+apihost
+adminhost
+streaminghost
+livehost
+kmshost
+All hostname listed in ansible hosts are used to populate haproxy template 
+
+###Note:
+
+[haproxy template](https://github.com/Kaltura-PS/onprem-ansible/blob/37561ec50ccf6e20a45d02cc7b7e66132a4271d7/roles/kaltura-lb/templates/haproxy.template.cfg.j2)
+
+
+
+
+
+
+
